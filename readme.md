@@ -1,6 +1,6 @@
 Invoxia™ Web Client (UNOFFICIAL)
 ===========
-![](https://img.shields.io/github/stars/nicholas0g/InvoxiaWebClient.svg) ![](https://img.shields.io/github/forks/nicholas0g/InvoxiaWebClient.svg)
+![](https://img.shields.io/github/stars/nicholas0g/invoxiawebclient.svg) ![](https://img.shields.io/github/forks/nicholas0g/invoxiawebclient.svg)
 
 You can support the development of this software making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)
 
