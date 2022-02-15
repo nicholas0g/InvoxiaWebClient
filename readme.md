@@ -4,7 +4,7 @@ Invoxia™ Web Client (UNOFFICIAL)
 
 You can support the development of this software making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)
 
-If you simple wanna use it you can go [here](#)
+If you simple wanna use it you can go [here](https://inv-webv.herokuapp.com/)
 
     Unofficial client to retrieve location data from Invoxia™ GPS trackers.
 
@@ -47,7 +47,7 @@ Part of this documentation was written based on [gps-traker](https://gitlab.com/
 2. npm
 
 ## Just use the software:
-Click [here](#)
+Click [here](https://inv-webv.herokuapp.com/)
 
 ## Do you want more features?
 Open a new issue, make a pull request or consider making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)
