@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container
+        .row
+            .col.mb-3.p-3     
+                h1.display-5.text-center.text-white
+                    |Web client for managing invoxia™ devices
+        .row 
+            .col 
+            .col 
+                p.alert.alert-danger.text-center(role="alert")=message
+            .col
+        .row
+            .col.mt-2
+                form(method="POST" action="/login")
+                    .mb-3 
+                        label.form-label.text-white Invoxia™ email address 
+                        input.form-control(name="email" type="email" required)
+                    .mb-3 
+                        label.form-label.text-white Invoxia™ account password
+                        input.form-control(name="password" type="password" required)
+                    button.btn.btn-light(type="submit") LogIn
+        .row 
+            .col-mt-2
+                p.text-center.text-white
+                    |This client never stores your data on the server, your access data will be stored in a cookie only in your web browser.
+                p.text-center.text-white
+                    |You can check this code on github or you can make a donation 
+                    a.text-white(href="https://github.com/nicholas0g/InvoxiaWebClient#readme") here

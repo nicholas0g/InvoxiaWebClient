@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    include menu
+    .container
+        .row.mb-3.p-3  
+            .col
+                h2.display-6.text-center.text-white
+                    |Select a device to view
+        .row.mb-3.p-3
+            each device in devices 
+                .col
+                    .card.mb-3(style="width: 18rem;")
+                        .text-center
+                            if(device['type']=="android"||device['type']=="iphone")
+                                i.bi.bi-phone(style="font-size: 2rem;color: blue;")
+                            else 
+                                i.bi.bi-tag(style="font-size: 2rem;color: blue;")
+                        h5.card-title.text-center=device['name']
+                        .card-text
+                            ul.list-group 
+                                li.list-group-item
+                                    |Created on #{device['created'].split("T")[0]}
+                                li.list-group-item
+                                    |Type: #{device['type']}
+                                li.list-group-item
+                                    |Timezone: #{device['timezone']}
+                                if(device['type']!="android"&&device['type']!="iphone")
+                                    li.list-group-item
+                                        |Last Event:
+                                        br
+                                        |#{device['tracker_status']['last_event']}
+                                    li.list-group-item
+                                        |Last Location Time: 
+                                        br
+                                        |#{device['tracker_status']['last_location']}
+                                    li.list-group-item
+                                        |Battery: #{device['tracker_status']['battery']}%
+                        if(device['type']!="android"&&device['type']!="iphone")
+                            a.btn.btn-info(href='/history/'+device['id']) Show on map

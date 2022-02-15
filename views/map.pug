@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    include menu
+    .container-fluid
+        .row.mb-3.p-3  
+            .col
+                h2.display-6.text-center.text-white
+                    |Record for #{device['name']}
+                p.text-center.text-white 
+                    |Last location at #{device['tracker_status']['last_location']} - Battery at #{device['tracker_status']['battery']}%
+                p.text-center.text-white 
+                    |Timezone #{device['timezone']}
+        .row.mb-2.p-1
+            #map.map
+    
+    script.
+        var map = L.map('map').setView(["#{positions[0]['lat']}","#{positions[0]['lng']}"], 12);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution:
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            }).addTo(map);
+
+    for position in positions
+        script.
+            if("#{position['datetime'].split('.')[0]}"+"Z"=="#{device['tracker_status']['last_location']}"){
+                var greenIcon = new L.Icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+                });
+                var marker=L.marker(["#{position['lat']}","#{position['lng']}"], {icon: greenIcon}).addTo(map);
+                marker.bindPopup("<b>Last position on date: #{position['datetime'].split('T')[0]}</b><br>time: #{position['datetime'].split('T')[1]}")
+                marker.addTo(map);
+            }
+            else{
+                var marker = L.marker(["#{position['lat']}","#{position['lng']}"])
+                marker.bindPopup("<b>date: #{position['datetime'].split('T')[0]}</b><br>time: #{position['datetime'].split('T')[1]}")
+                marker.addTo(map);
+            }
+            
+            

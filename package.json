@@ -1,0 +1,37 @@
+{
+  "name": "invoxiawebclient",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  },
+  "description": "Invoxia™ Web Client (UNOFFICIAL)\r ===========\r You can support the development of this software making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)",
+  "main": "./bin/www",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholas0g/InvoxiaWebClient.git"
+  },
+  "keywords": [
+    "invoxia",
+    "gps",
+    "tracker"
+  ],
+  "author": "nicholas giordano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholas0g/InvoxiaWebClient/issues"
+  },
+  "homepage": "https://github.com/nicholas0g/InvoxiaWebClient#readme"
+}
