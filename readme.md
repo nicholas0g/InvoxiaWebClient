@@ -39,7 +39,7 @@ Part of this documentation was written based on [gps-traker](https://gitlab.com/
 1. `git clone https://github.com/nicholas0g/InvoxiaWebClient.git`
 2. `cd InvoxiaWebClient`
 3. `npm install`
-4. `npm run`
+4. `npm start`
 5. go to http://localhost:3000 on your browser
 
 ### Requirements
