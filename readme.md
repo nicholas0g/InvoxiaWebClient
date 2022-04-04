@@ -1,6 +1,6 @@
 Invoxia™ Web Client (UNOFFICIAL)
 ===========
-![](https://img.shields.io/github/stars/nicholas0g/invoxiawebclient.svg) ![](https://img.shields.io/github/forks/nicholas0g/invoxiawebclient.svg)
+![](https://img.shields.io/github/stars/nicholas0g/invoxiawebclient.svg) ![](https://img.shields.io/github/forks/nicholas0g/invoxiawebclient.svg) ![](https://img.shields.io/docker/pulls/nicholas0g/invoxiawebclient)
 
 You can support the development of this software making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)
 
@@ -33,6 +33,12 @@ usage of their API to be in violation with their terms of use.
 
 
 Part of this documentation was written based on [gps-traker](https://gitlab.com/ezlo.picori/gps_tracker)
+
+## Run with Docker:
+```
+docker run -p 3000:3000 --name invoxiaweb nicholas0g/invoxiawebclient:1.0 
+```
+
 
 ## Run on you device:
 
