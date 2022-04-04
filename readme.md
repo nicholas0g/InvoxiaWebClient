@@ -4,11 +4,11 @@ Invoxia™ Web Client (UNOFFICIAL)
 
 You can support the development of this software making a donation [here](https://www.paypal.com/paypalme/nicholasgiordano)
 
-If you simple wanna use it you can go [here](https://inv-webv.herokuapp.com/)
+If you simply want to use the software you can go [here](https://inv-webv.herokuapp.com/)
 
     Unofficial client to retrieve location data from Invoxia™ GPS trackers.
 
-Invoxia™ is a company that produces gps traker swhich rely on the LoRa or SigFox
+Invoxia™ is a company that produces gps trakers which rely on the LoRa or SigFox
 networks. Trackers location can only be accessed through their Android and iOS applications.
 This ``unofficil web client`` uses the same API of your smartphone app and gives you ccess to:
 
